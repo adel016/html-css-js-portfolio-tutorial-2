@@ -170,11 +170,26 @@ section {
 }
 
 .section__pic-container {
+  width: 275px; /* Taille fixe */
+  height: 275px; /* Taille identique pour un cercle parfait */
+  border-radius: 50%; /* Cercle parfait */
+  background-color: #f4f4f4; /* Couleur de fond */
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Empêche tout débordement */
+  margin: 0 auto; /* Centre horizontalement */
+  flex-shrink: 0; /* Empêche la déformation du conteneur */
 }
+
+.section__pic-container img {
+  width: 100%; /* L'image s'adapte à la largeur du conteneur */
+  height: 100%; /* L'image s'adapte à la hauteur du conteneur */
+  object-fit: cover; /* Remplit le conteneur sans distorsion */
+}
+
+
+
 
 .section__text {
   align-self: center;
